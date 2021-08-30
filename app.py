@@ -26,7 +26,7 @@ def checkin():
         data['interval'] = int(interval)   
     ver = request.form.get('VER')
     if ver is not None:
-        data['ver'] = int(ver)
+        data['ver'] = ver
     bssid = request.form.get('bssid')
     if bssid is not None:
         data['bssid'] = bssid
