@@ -8,8 +8,10 @@ COPY requirements.txt requirements.txt
 
 RUN pip3 install -r requirements.txt
 
-COPY app/* .
+COPY run.sh run.sh
 
-EXPOSE 8000
+COPY app.py app.py
 
-CMD ["gunicorn", "-b", "0.0.0.0:8000", "server:app"]
+EXPOSE 8888
+
+CMD ["sh", "run.sh"]
